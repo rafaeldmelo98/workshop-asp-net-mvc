@@ -8,12 +8,14 @@ namespace SalesWebMVC.Controllers
 {
     public class SalesRecordsController : Controller
     {
+        private readonly SalesRecordsService _salesRecordsService;
+
         public IActionResult Index()
         {
             return View();
         }
 
-        public IActionResult SimplesSearch()
+        public async Task<IActionResult> SimplesSearch(DateTime? minDate, DateTime? maxDate)
         {
             return View();
         }
